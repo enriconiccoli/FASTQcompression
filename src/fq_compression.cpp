@@ -809,13 +809,15 @@ void invert()
 	
         
         for(auto q:qualities) statistics_qual_after[q-33]++;
-        
-        std::getline(in, line);//get read ID from the original FASTQ (headers)
-        
-        //write output FASTQ file
-	//cout << line << endl;
-
-        out << line << endl; //headers
+	    
+	//write output FASTQ file    
+        #if I==0
+        	std::getline(in, line);//get read ID from the original FASTQ (headers) 
+        	out << line << endl; //headers
+	#else
+	    	//"No ID" mode: every header is replaced by '@'
+		out << "@" << endl;
+	#endif
         out << bases << endl; //bases
         out << "+" << endl;
         out << qualities << endl; //qs
