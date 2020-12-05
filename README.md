@@ -91,7 +91,9 @@ There are some parameter we can set to compile fq_compression in order to change
   
 2) The parameter B is to use Illumina 8 level binning (B=1).
 
-The default parameters are M=0 and B=0.
+3) The parameter I is to replace every header with '@' (I=1).
+
+The default parameters are M=0, B=0 and I=0.
 
 For example, to smooth QS by using Mean_Err+Illumina_8_level_binning, compile fq_compression by
 
