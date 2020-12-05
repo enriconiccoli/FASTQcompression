@@ -8,9 +8,11 @@ M=0
 MODE = -DM=$(M) 
 B=0
 BIN = -DB=$(B)
+I=0
+ID = -DB=$(I)
 LFLAGS = -lm -ldl
 
-CXX_FLAGS=$(MY_CXX_FLAGS) $(MY_CXX_OPT_FLAGS) $(LFLAGS) $(MODE) $(BIN)
+CXX_FLAGS=$(MY_CXX_FLAGS) $(MY_CXX_OPT_FLAGS) $(LFLAGS) $(MODE) $(BIN) $(ID)
 
 ####
 
